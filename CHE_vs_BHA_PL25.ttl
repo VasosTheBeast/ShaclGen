@@ -1,0 +1,272 @@
+@prefix : <http://semanticweb.org/unitedOntology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Andrey_Santos_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Andrey_Santos ;
+    :minutesPlayed 54 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Bart_Verbruggen_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Bart_Verbruggen ;
+    :minutesPlayed 90 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Benoit_Badiashile_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Benoit_Badiashile ;
+    :minutesPlayed 11 ;
+    :playerReceivedYellowCard :YellowCard_CHE_vs_BHA_PL25_Benoit_Badiashile_89 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Brajan_Gruda_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Brajan_Gruda ;
+    :minutesPlayed 23 ;
+    :playerAssisted <http://semanticweb.org/unitedOntology#Assist_CHE_vs_BHA_PL25_Brajan_Gruda_90+10> ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Carlos_Baleba_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Carlos_Baleba ;
+    :minutesPlayed 67 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Danny_Welbeck_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Danny_Welbeck ;
+    :minutesPlayed 23 ;
+    :playerReceivedYellowCard <http://semanticweb.org/unitedOntology#YellowCard_CHE_vs_BHA_PL25_Danny_Welbeck_90+11> ;
+    :playerScored :Goal_CHE_vs_BHA_PL25_Danny_Welbeck_77,
+        <http://semanticweb.org/unitedOntology#Goal_CHE_vs_BHA_PL25_Danny_Welbeck_90+10> ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Diego_Gomez_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Diego_Gomez ;
+    :minutesPlayed 85 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Enzo_Fernández_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Enzo_Fernández ;
+    :minutesPlayed 90 ;
+    :playerScored :Goal_CHE_vs_BHA_PL25_Enzo_Fernández_24 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Estevao_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Estevao ;
+    :minutesPlayed 63 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Ferdi_Kadioglu_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Ferdi_Kadioglu ;
+    :minutesPlayed 90 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Georginio_Rutter_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Georginio_Rutter ;
+    :minutesPlayed 85 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Jan_Paul_van_Hecke_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Jan_Paul_van_Hecke ;
+    :minutesPlayed 90 ;
+    :playerReceivedYellowCard :YellowCard_CHE_vs_BHA_PL25_Jan_Paul_van_Hecke_89 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Joao_Pedro_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Joao_Pedro ;
+    :minutesPlayed 90 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Joel_Veltman_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Joel_Veltman ;
+    :minutesPlayed 55 ;
+    :playerReceivedYellowCard :YellowCard_CHE_vs_BHA_PL25_Joel_Veltman_9 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Jorrel_Hato_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Jorrel_Hato ;
+    :minutesPlayed 79 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Josh_Acheampong_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Josh_Acheampong ;
+    :minutesPlayed 36 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Kaoru_Mitoma_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Kaoru_Mitoma ;
+    :minutesPlayed 67 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Lewis_Dunk_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Lewis_Dunk ;
+    :minutesPlayed 90 ;
+    :playerReceivedYellowCard :YellowCard_CHE_vs_BHA_PL25_Lewis_Dunk_90 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Malo_Gusto_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Malo_Gusto ;
+    :minutesPlayed 27 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Marc_Cucurella_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Marc_Cucurella ;
+    :minutesPlayed 90 ;
+    :playerReceivedYellowCard :YellowCard_CHE_vs_BHA_PL25_Marc_Cucurella_42 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Mats_Wieffer_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Mats_Wieffer ;
+    :minutesPlayed 35 ;
+    :playerAssisted <http://semanticweb.org/unitedOntology#Assist_CHE_vs_BHA_PL25_Mats_Wieffer_90+2> ;
+    :playerReceivedYellowCard :YellowCard_CHE_vs_BHA_PL25_Mats_Wieffer_64 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Maxim_De_Cuyper_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Maxim_De_Cuyper ;
+    :minutesPlayed 5 ;
+    :playerScored <http://semanticweb.org/unitedOntology#Goal_CHE_vs_BHA_PL25_Maxim_De_Cuyper_90+2> ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Moisés_Caicedo_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Moisés_Caicedo ;
+    :minutesPlayed 90 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Pedro_Neto_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Pedro_Neto ;
+    :minutesPlayed 79 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Reece_James_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Reece_James ;
+    :minutesPlayed 90 ;
+    :playerReceivedYellowCard :YellowCard_CHE_vs_BHA_PL25_Reece_James_66 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Robert_Sánchez_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Robert_Sánchez ;
+    :minutesPlayed 90 ;
+    :playerReceivedYellowCard :YellowCard_CHE_vs_BHA_PL25_Robert_Sánchez_90 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Romeo_Lavia_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Romeo_Lavia ;
+    :minutesPlayed 11 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Stefanos_Tzimas_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Stefanos_Tzimas ;
+    :minutesPlayed 5 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Trevoh_Chalobah_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Trevoh_Chalobah ;
+    :minutesPlayed 90 ;
+    :playerReceivedRedCard :RedCard_CHE_vs_BHA_PL25_Trevoh_Chalobah ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Yankuba_Minteh_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Yankuba_Minteh ;
+    :minutesPlayed 90 ;
+    :playerAssisted :Assist_CHE_vs_BHA_PL25_Yankuba_Minteh_77 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+:Yasin_Ayari_Stats_CHE_vs_BHA_PL25 a :PlayerMatchStats ;
+    :matchStatsOfPlayer :Yasin_Ayari ;
+    :minutesPlayed 90 ;
+    :playerStatsOfMatch :CHE_vs_BHA_PL25 .
+
+<http://semanticweb.org/unitedOntology#Assist_CHE_vs_BHA_PL25_Brajan_Gruda_90+10> a :Assist ;
+    :assistForGoal <http://semanticweb.org/unitedOntology#Goal_CHE_vs_BHA_PL25_Danny_Welbeck_90+10> ;
+    :assistTime "90+10"^^xsd:string .
+
+<http://semanticweb.org/unitedOntology#Assist_CHE_vs_BHA_PL25_Mats_Wieffer_90+2> a :Assist ;
+    :assistForGoal <http://semanticweb.org/unitedOntology#Goal_CHE_vs_BHA_PL25_Maxim_De_Cuyper_90+2> ;
+    :assistTime "90+2"^^xsd:string .
+
+:Assist_CHE_vs_BHA_PL25_Yankuba_Minteh_77 a :Assist ;
+    :assistForGoal :Goal_CHE_vs_BHA_PL25_Danny_Welbeck_77 ;
+    :assistTime "77"^^xsd:string .
+
+:BHATeamStats_CHE_vs_BHA_PL25 a :TeamMatchStats ;
+    :aerialDuelsWon "57.9"^^xsd:float ;
+    :ballPossession "40.5"^^xsd:float ;
+    :corners 7 ;
+    :statsOfTeam :Brighton_and_Hove_Albion ;
+    :teamFoulsCommitted 16 ;
+    :teamFoulsWon 9 ;
+    :teamGoalsScored 3 ;
+    :teamOffsides 2 ;
+    :teamShotsOnTarget 3 ;
+    :teamTotalShots 12 ;
+    :teamYellowCards 5 ;
+    :totalSaves 2 .
+
+:CHETeamStats_CHE_vs_BHA_PL25 a :TeamMatchStats ;
+    :aerialDuelsWon "42.1"^^xsd:float ;
+    :ballPossession "59.5"^^xsd:float ;
+    :corners 5 ;
+    :statsOfTeam :Chelsea ;
+    :teamFoulsCommitted 9 ;
+    :teamFoulsWon 16 ;
+    :teamGoalsScored 1 ;
+    :teamOffsides 2 ;
+    :teamShotsOnTarget 3 ;
+    :teamTotalShots 13 ;
+    :teamYellowCards 3 ;
+    :totalSaves 0 .
+
+:Goal_CHE_vs_BHA_PL25_Enzo_Fernández_24 a :Goal ;
+    :goalOrderInMatch 1 ;
+    :goalTime "24"^^xsd:string .
+
+:RedCard_CHE_vs_BHA_PL25_Trevoh_Chalobah a :RedCard ;
+    :redCardTime "53"^^xsd:string .
+
+:YellowCard_CHE_vs_BHA_PL25_Benoit_Badiashile_89 a :YellowCard ;
+    :yellowCardTime "89"^^xsd:string .
+
+<http://semanticweb.org/unitedOntology#YellowCard_CHE_vs_BHA_PL25_Danny_Welbeck_90+11> a :YellowCard ;
+    :yellowCardTime "90+11"^^xsd:string .
+
+:YellowCard_CHE_vs_BHA_PL25_Jan_Paul_van_Hecke_89 a :YellowCard ;
+    :yellowCardTime "89"^^xsd:string .
+
+:YellowCard_CHE_vs_BHA_PL25_Joel_Veltman_9 a :YellowCard ;
+    :yellowCardTime "9"^^xsd:string .
+
+:YellowCard_CHE_vs_BHA_PL25_Lewis_Dunk_90 a :YellowCard ;
+    :yellowCardTime "90"^^xsd:string .
+
+:YellowCard_CHE_vs_BHA_PL25_Marc_Cucurella_42 a :YellowCard ;
+    :yellowCardTime "42"^^xsd:string .
+
+:YellowCard_CHE_vs_BHA_PL25_Mats_Wieffer_64 a :YellowCard ;
+    :yellowCardTime "64"^^xsd:string .
+
+:YellowCard_CHE_vs_BHA_PL25_Reece_James_66 a :YellowCard ;
+    :yellowCardTime "66"^^xsd:string .
+
+:YellowCard_CHE_vs_BHA_PL25_Robert_Sánchez_90 a :YellowCard ;
+    :yellowCardTime "90"^^xsd:string .
+
+:Goal_CHE_vs_BHA_PL25_Danny_Welbeck_77 a :Goal ;
+    :assistedBy :Yankuba_Minteh ;
+    :goalOrderInMatch 2 ;
+    :goalTime "77"^^xsd:string .
+
+<http://semanticweb.org/unitedOntology#Goal_CHE_vs_BHA_PL25_Danny_Welbeck_90+10> a :Goal ;
+    :assistedBy :Brajan_Gruda ;
+    :goalOrderInMatch 3 ;
+    :goalTime "90+10"^^xsd:string .
+
+<http://semanticweb.org/unitedOntology#Goal_CHE_vs_BHA_PL25_Maxim_De_Cuyper_90+2> a :Goal ;
+    :assistedBy :Mats_Wieffer ;
+    :goalOrderInMatch 4 ;
+    :goalTime "90+2"^^xsd:string .
+
+:CHE_vs_BHA_PL25 a :Match ;
+    :hasAwayTeam :Brighton_and_Hove_Albion ;
+    :hasHomeTeam :Chelsea ;
+    :matchGameweek 6 ;
+    :matchHasTeamStats :BHATeamStats_CHE_vs_BHA_PL25,
+        :CHETeamStats_CHE_vs_BHA_PL25 ;
+    :matchPartOfTournament :PL_25 .
+

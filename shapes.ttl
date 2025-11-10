@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://semanticweb.org/example#Human_Shape> a sh:NodeShape ;
+    sh:closed true ;
+    sh:property <http://semanticweb.org/example#hasProfession_PropertyShape>,
+        <http://semanticweb.org/example#hasSex_PropertyShape> ;
+    sh:targetClass <http://semanticweb.org/example#Human> .
+
+<http://semanticweb.org/example#Profession_Shape> a sh:NodeShape ;
+    sh:targetClass <http://semanticweb.org/example#Profession> .
+
+<http://semanticweb.org/example#hasProfession_PropertyShape> a sh:PropertyShape ;
+    sh:class <http://semanticweb.org/example#Profession> ;
+    sh:path <http://semanticweb.org/example#hasProfession> .
+
+<http://semanticweb.org/example#hasSex_PropertyShape> a sh:PropertyShape ;
+    sh:in ( "Male"^^xsd:string "Female"^^xsd:string ) ;
+    sh:path <http://semanticweb.org/example#hasSex> .
+
