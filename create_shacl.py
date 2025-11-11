@@ -103,6 +103,15 @@ def create_property_shape(shapes_g, path, info):
         shapes_g.add((pshape, SH.minCount, Literal(info['minCount'], datatype=XSD.integer)))
     if 'maxCount' in info:
         shapes_g.add((pshape, SH.maxCount, Literal(info['maxCount'], datatype=XSD.integer)))
+    # If property has minInclusicve or maxInclusive add it to the shape
+    if 'minInclusive' in info:
+        shapes_g.add((pshape, SH.minInclusive, Literal(info['minInclusive'], datatype=XSD.integer)))
+    if 'maxInclusive' in info:
+        shapes_g.add((pshape, SH.maxInclusive, Literal(info['maxInclusive'], datatype=XSD.integer)))
+    if 'minLength' in info:
+        shapes_g.add((pshape, SH.minLength, Literal(info['minLength'], datatype=XSD.integer)))
+    if 'maxLength' in info:
+        shapes_g.add((pshape, SH.maxLength, Literal(info['maxLength'], datatype=XSD.integer)))
     # If property has as range owl.oneOf, create an rdf:List of the list
     if 'in' in info and info['in']:
         # create an rdf:List for sh:in
@@ -139,10 +148,19 @@ def generate_shacl_from_ontology(g):
             if cls in domains:
                 # build info for mapping
                 info = {}
+                print(f"Class '{cls.split("#")[-1]}' has property: '{p.split("#")[-1]}', with range: '{str(list(ranges)[0]).split("#")[-1]}'")              
+                # required -> minCount 1
+                required = None
+                while required not in (["y", "n"]):
+                    required = input("Do you want to make this property required? (y|n): ")
+                if required == "y":
+                    info['minCount'] = 1
+                functional = None
+                while functional not in (["y", "n"]):
+                    functional = input("Do you want to make this property functional? (y|n): ")
                 # functional -> maxCount 1
-                if is_functional(g, p):
+                if is_functional(g, p) or functional == 'y':
                     info['maxCount'] = 1
-                
                 # Range handling: choose first range if many
                 if ranges:
                     r = next(iter(ranges))
@@ -159,8 +177,30 @@ def generate_shacl_from_ontology(g):
                             info['class'] = r
                         # else the range is a literal
                         else:
+                            # range is a datatype
                             info['datatype'] = r
-                       
+                            # Range: Integer -> set bottom/upper limit (min/maxInclusive)
+                            if r == XSD.integer:
+                                f = None
+                                while f not in ["y", "n"]:
+                                    f = input("Do you want to set a bottom and an upper limit for this property? (y|n): ")
+                                if f == 'y':
+                                    min_limit = input("Set bottom limit (included): ")                                   
+                                    max_limit = input("Set upper limit (included): ")
+                                    info['minInclusive'] = int(min_limit)
+                                    info['maxInclusive'] = int(max_limit)
+                            # Range: String -> set min/max Length
+                            elif r == XSD.string:
+                                f = None
+                                while f not in ["y", "n"]:
+                                    f = input("Do you want to set a minumum and a maximum length of characters for this property? (y|n): ")
+                                if f == 'y':
+                                    min_limit = input("Set minimum length: ")                                   
+                                    max_limit = input("Set maximum length: ")
+                                    info['minLength'] = int(min_limit)
+                                    info['maxLength'] = int(max_limit)
+                                    
+                            
                 
                 # for this property create property shape and add it to the Shapes Graph 
                 pshape = create_property_shape(shapes, p, info)
@@ -169,12 +209,12 @@ def generate_shacl_from_ontology(g):
 
     return shapes
 def main():
-    input_ttl = "test.owl"
+    input_ttl = "examples/ontology.ttl"
     output_ttl = "shapes.ttl"
     g = load_graph(input_ttl)
     print("Loaded ontology. Triples:", len(g))
-    for (s,p,o) in g.triples((None,None,None)):
-       print(s,p,o)
+    #for (s,p,o) in g.triples((None,None,None)):
+    #   print(s,p,o)
     shapes = generate_shacl_from_ontology(g)
     shapes.serialize(destination=output_ttl, format="turtle")
     print("Wrote SHACL shapes to", output_ttl)

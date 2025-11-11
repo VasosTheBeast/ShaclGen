@@ -1,21 +1,30 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://semanticweb.org/example#Human_Shape> a sh:NodeShape ;
-    sh:closed true ;
-    sh:property <http://semanticweb.org/example#hasProfession_PropertyShape>,
-        <http://semanticweb.org/example#hasSex_PropertyShape> ;
-    sh:targetClass <http://semanticweb.org/example#Human> .
+<http://www.example.org#Dog_Shape> a sh:NodeShape ;
+    sh:targetClass <http://www.example.org#Dog> .
 
-<http://semanticweb.org/example#Profession_Shape> a sh:NodeShape ;
-    sh:targetClass <http://semanticweb.org/example#Profession> .
+<http://www.example.org#Person_Shape> a sh:NodeShape ;
+    sh:property <http://www.example.org#hasAge_PropertyShape>,
+        <http://www.example.org#hasFriend_PropertyShape>,
+        <http://www.example.org#hasName_PropertyShape> ;
+    sh:targetClass <http://www.example.org#Person> .
 
-<http://semanticweb.org/example#hasProfession_PropertyShape> a sh:PropertyShape ;
-    sh:class <http://semanticweb.org/example#Profession> ;
-    sh:path <http://semanticweb.org/example#hasProfession> .
+<http://www.example.org#Student_Shape> a sh:NodeShape ;
+    sh:targetClass <http://www.example.org#Student> .
 
-<http://semanticweb.org/example#hasSex_PropertyShape> a sh:PropertyShape ;
-    sh:in ( "Male"^^xsd:string "Female"^^xsd:string ) ;
-    sh:path <http://semanticweb.org/example#hasSex> .
+<http://www.example.org#hasAge_PropertyShape> a sh:PropertyShape ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:path <http://www.example.org#hasAge> .
+
+<http://www.example.org#hasFriend_PropertyShape> a sh:PropertyShape ;
+    sh:class <http://www.example.org#Person> ;
+    sh:path <http://www.example.org#hasFriend> .
+
+<http://www.example.org#hasName_PropertyShape> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:path <http://www.example.org#hasName> .
 

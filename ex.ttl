@@ -8,3 +8,4 @@
 :Miss a :Human ;
     :hasSex "Female"^^xsd:string;
     :hasProfession :Worker.
+   

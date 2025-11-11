@@ -11,9 +11,9 @@ def shacl_validate(ont_graph, shapes,data_graph):
     return conforms, results_text
 
 if __name__ == "__main__":
-    ont_graph = "test.owl"
+    ont_graph = "examples/ontology.ttl"
     shapes = "shapes.ttl"
-    data_graph = "ex.ttl"
+    data_graph = "examples/example.ttl"
 
     ans, text= shacl_validate(ont_graph, shapes,data_graph)
 
