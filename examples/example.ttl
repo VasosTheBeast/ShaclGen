@@ -4,9 +4,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:Oscar a ex:Dog.
-ex:Bob a ex:Student ;
-    ex:hasAge 100 ;
-    ex:hasName "Bob" ;
-    ex:hasFriend ex:Oscar .
+
+ex:Bob a ex:Person;
+    ex:hasAge 119;
+    ex:hasName "aaa" ;
+    ex:hasDate "3000-07-07"^^xsd:date .
+    # ex:hasJob ex:Programmer . 
+
+
 

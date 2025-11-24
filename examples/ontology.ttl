@@ -5,17 +5,21 @@
 @prefix ex: <http://www.example.org#> .
 
 
-ex:Dog a owl:Class.
+
 ex:Person a owl:Class .
-ex:Student a owl:Class ;
-         rdfs:subClassOf ex:Person .
+ex:Job a owl:Class .
+
 ex:hasAge a owl:DatatypeProperty ;
     rdfs:domain ex:Person ;
     rdfs:range xsd:integer .
 ex:hasName a owl:DatatypeProperty ;
     rdfs:domain ex:Person ;
     rdfs:range xsd:string .
-
-ex:hasFriend a owl:ObjectProperty ;
+ex:hasJob a owl:ObjectProperty ;
     rdfs:domain ex:Person ;
-    rdfs:range ex:Person .
+    rdfs:range ex:Job .
+ex:hasDate a owl:DatatypeProperty; 
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:date .
+
+

@@ -1,30 +1,24 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.org#> .
 
-<http://www.example.org#Dog_Shape> a sh:NodeShape ;
-    sh:targetClass <http://www.example.org#Dog> .
+ex:PersonShape a sh:NodeShape ;
+    sh:targetClass ex:Person ;
+    sh:property ex:hasAgeShape ;
+    sh:property ex:hasNameShape ;
+    sh:property ex:hasJobShape .
 
-<http://www.example.org#Person_Shape> a sh:NodeShape ;
-    sh:property <http://www.example.org#hasAge_PropertyShape>,
-        <http://www.example.org#hasFriend_PropertyShape>,
-        <http://www.example.org#hasName_PropertyShape> ;
-    sh:targetClass <http://www.example.org#Person> .
+ex:JobShape a sh:NodeShape ;
+    sh:targetClass ex:Job .
 
-<http://www.example.org#Student_Shape> a sh:NodeShape ;
-    sh:targetClass <http://www.example.org#Student> .
+ex:hasAgeShape a sh:PropertyShape ;
+    sh:path ex:hasAge ;
+    sh:datatype xsd:integer .
 
-<http://www.example.org#hasAge_PropertyShape> a sh:PropertyShape ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:path <http://www.example.org#hasAge> .
+ex:hasNameShape a sh:PropertyShape ;
+    sh:path ex:hasName ;
+    sh:datatype xsd:string .
 
-<http://www.example.org#hasFriend_PropertyShape> a sh:PropertyShape ;
-    sh:class <http://www.example.org#Person> ;
-    sh:path <http://www.example.org#hasFriend> .
-
-<http://www.example.org#hasName_PropertyShape> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:path <http://www.example.org#hasName> .
-
+ex:hasJobShape a sh:PropertyShape ;
+    sh:path ex:hasJob ;
+    sh:class ex:Job .
