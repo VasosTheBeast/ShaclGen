@@ -1,25 +1,34 @@
+@prefix : <http://www.cars.com#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://www.example.org#> .
 
+: a owl:Ontology .
 
+:User a rdfs:Class .
+:Car a rdfs:Class .
 
-ex:Person a owl:Class .
-ex:Job a owl:Class .
+:hasUsername a owl:DatatypeProperty ;
+  rdfs:domain :User ;
+  rdfs:range xsd:string .
 
-ex:hasAge a owl:DatatypeProperty ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:integer .
-ex:hasName a owl:DatatypeProperty ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-ex:hasJob a owl:ObjectProperty ;
-    rdfs:domain ex:Person ;
-    rdfs:range ex:Job .
-ex:hasDate a owl:DatatypeProperty; 
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:date .
+:hasId a owl:DatatypeProperty ;
+  rdfs:domain :User ;
+  rdfs:range xsd:integer .
 
+:hasCar a owl:ObjectProperty ;
+  rdfs:domain :User ;
+  rdfs:range :Car .
 
+:hasCarName a owl:DatatypeProperty ;
+  rdfs:domain :Car ;
+  rdfs:range xsd:string .
+
+:hasColor a owl:DatatypeProperty ;
+  rdfs:domain :Car ;
+  rdfs:range xsd:string .
+
+:hasPrice a owl:DatatypeProperty ;
+  rdfs:domain :Car ;
+  rdfs:range xsd:integer .

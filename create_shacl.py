@@ -100,6 +100,9 @@ def create_property_shape(shapes_g, path, info):
     # if it is an object property add it to the shape by using SH["class"] (creates sh.class)
     if 'class' in info and info['class'] is not None:
         shapes_g.add((pshape, SH["class"], info['class']))
+    # if nodeKind is specified add it to the shape, used for object properties
+    if 'nodeKind' in info and info['nodeKind'] is not None:
+        shapes_g.add((pshape, SH.nodeKind, info['nodeKind']))
     # if property has minCount or maxCount add it to the shape 
     if 'minCount' in info:
         shapes_g.add((pshape, SH.minCount, Literal(info['minCount'], datatype=XSD.integer)))
@@ -180,9 +183,9 @@ def generate_shacl_from_ontology(g):
                         # prefer sh:in with the enumerated values
                         info['in'] = enum_vals
                     else:
-                        # original handling: if r is a class -> sh:class, else treat as datatype (heuristic)
+                        # original handling: if r is a class -> sh:nodeKind sh:IRI, else treat as datatype (heuristic)
                         if (r, RDF.type, OWL.Class) in g or (r, RDF.type, RDFS.Class) in g:
-                            info['class'] = r
+                            info['nodeKind'] = SH.IRI
                         # else the range is a literal
                         else:
                             # range is a datatype
@@ -253,13 +256,15 @@ def generate_shacl_from_ontology(g):
     return shapes
 def main():
     input_ontology = "examples/ontology.ttl"
-    output_ttl = "shapes2.ttl"
+    output_ttl = "shapes.ttl"
     g = load_graph(input_ontology)
     print("Loaded ontology. Triples:", len(g))
 
     shapes = generate_shacl_from_ontology(g)
     shapes.serialize(destination=output_ttl, format="turtle")
     print("Wrote SHACL shapes to", output_ttl)
+
+    
 
 if __name__ == "__main__":
     main()

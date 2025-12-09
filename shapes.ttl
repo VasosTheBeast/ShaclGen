@@ -1,24 +1,40 @@
+@prefix ex: <http://www.cars.com#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://www.example.org#> .
 
-ex:PersonShape a sh:NodeShape ;
-    sh:targetClass ex:Person ;
-    sh:property ex:hasAgeShape ;
-    sh:property ex:hasNameShape ;
-    sh:property ex:hasJobShape .
+ex:Car_Shape a sh:NodeShape ;
+    sh:property ex:hasCarName_PropertyShape,
+        ex:hasColor_PropertyShape,
+        ex:hasPrice_PropertyShape ;
+    sh:targetClass ex:Car .
 
-ex:JobShape a sh:NodeShape ;
-    sh:targetClass ex:Job .
+ex:User_Shape a sh:NodeShape ;
+    sh:property ex:hasCar_PropertyShape,
+        ex:hasId_PropertyShape,
+        ex:hasUsername_PropertyShape ;
+    sh:targetClass ex:User .
 
-ex:hasAgeShape a sh:PropertyShape ;
-    sh:path ex:hasAge ;
-    sh:datatype xsd:integer .
+ex:hasCarName_PropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:path ex:hasCarName .
 
-ex:hasNameShape a sh:PropertyShape ;
-    sh:path ex:hasName ;
-    sh:datatype xsd:string .
+ex:hasCar_PropertyShape a sh:PropertyShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path ex:hasCar .
 
-ex:hasJobShape a sh:PropertyShape ;
-    sh:path ex:hasJob ;
-    sh:class ex:Job .
+ex:hasColor_PropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:path ex:hasColor .
+
+ex:hasId_PropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:integer ;
+    sh:path ex:hasId .
+
+ex:hasPrice_PropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:integer ;
+    sh:path ex:hasPrice .
+
+ex:hasUsername_PropertyShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:path ex:hasUsername .
+
